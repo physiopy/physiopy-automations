@@ -8,4 +8,4 @@ Added the label `automation` to the project board to capture some of these type 
 *These can be implemented in other physiopy repos, if desired*
 
 - [auto-author-assign.yml](.github/workflows/auto-author-assign.yml) automatically makes the author of a PR or Issue the assignee of it. This should facilitate integration with the project board, because the project board reads the 'Assignee' label
-- ...
+- [auto-label.yml](.github/workflows/auto-label.yml) automatically assigns labels to a PR if the PR edits a specific file. The mapping between file and label is defined in [labeler.yml](.github/labeler.yml) and can be expanded to fit for each physiopy repo 
