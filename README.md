@@ -7,4 +7,4 @@ Added the label `automation` to the project board to capture some of these type 
 
 *These can be implemented in other physiopy repos, if desired*
 
-- [worfklows/auto-author-assign.yml](worfklows/auto-author-assign.yml) automatically makes the author of a PR or Issue the assignee of it. This should facilitate integration with the project board, because the project board reads the 'Assignee' label
+- [auto-author-assign.yml](.github/worfklows/auto-author-assign.yml) automatically makes the author of a PR or Issue the assignee of it. This should facilitate integration with the project board, because the project board reads the 'Assignee' label
