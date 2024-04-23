@@ -2,6 +2,7 @@
 A place to test github actions & workflows, and perhaps also automation related to the project board 
 
 ## Workflows implemented in this test repo
+<!-- Some workflows exist in the physiopy repos that are not listed here -->
 
 ### [auto-author-assign.yml](.github/workflows/auto-author-assign.yml) 
 - this workflow automatically makes the author of a PR or Issue the assignee of it. This should facilitate integration with the project board, because the project board reads the 'Assignee' label
