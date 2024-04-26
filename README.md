@@ -1,4 +1,4 @@
-# physiopy-actions-workflows
+# physiopy-test-workflows
 A place to test github actions & workflows, and perhaps also automation related to the project board 
 
 ## Workflows implemented in this test repo
