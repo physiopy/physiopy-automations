@@ -10,7 +10,7 @@ A place to test [github actions & workflows](https://docs.github.com/en/actions)
 ### [auto-label.yml](.github/workflows/auto-label.yml) 
 - this workflow automatically assigns labels to a PR if the PR edits a specific file. The mapping between file and label is defined in [labeler.yml](.github/labeler.yml) and this mapping/dictionary file can be expanded for each physiopy repo 
 
-## Are the workflows above implemented in other repos?
+## Are the workflows above implemented in other physiopy repos?
  
 | Repo                         | auto-author-assign | auto-label |
 | --                           | --                 | -- |
