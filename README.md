@@ -14,9 +14,9 @@ A place to test [github actions & workflows](https://docs.github.com/en/actions)
  
 | Repo                         | auto-author-assign | auto-label |
 | --                           | --                 | -- |
-| physiopy-repository-template | pending PR         | pending PR |
+| physiopy-repository-template | yes                |yes |
 | physiopy.github.io           | pending PR         | pending PR |
-| physiopy-community-guidelines| pending PR         | pending PR |
+| physiopy-community-guidelines| yes                |yes |
 | physiopy                     | pending PR         | pending PR |
 | phys2bids                    | yes                | yes     |
 | peakdet                      | pending PR         | pending PR |
