@@ -4,7 +4,7 @@
 
 # Comment to be posted to on first time issues
 newIssueWelcomeComment: >
-  ![Thank You Banner](../test_banner.png)
+  ![Thank You Banner](https://github.com/physiopy/physiopy-test-workflows/blob/master/test_banner.png)
   
   🎉 Thanks for opening your first issue in this repo! Please check our contribution guidelines (link) and follow the issue template.
   
@@ -13,7 +13,7 @@ newIssueWelcomeComment: >
 
 # Comment to be posted to on PRs from first time contributors in your repository
 newPRWelcomeComment: >
-  ![Thank You Banner](../test_banner.png)
+  ![Thank You Banner](https://github.com/physiopy/physiopy-test-workflows/blob/master/test_banner.png)
   
   🎉 Thanks for opening your first pull request in this repo! Please check our contribution guidelines (link) and follow the PR template.
   
@@ -22,7 +22,7 @@ newPRWelcomeComment: >
 
 # Comment to be posted to on pull requests merged by a first time user
 firstPRMergeComment: >
-  ![Thank You Banner](../test_banner.png)
+  ![Thank You Banner](https://github.com/physiopy/physiopy-test-workflows/blob/master/test_banner.png)
   
   🎉 Congrats on merging your first pull request in this repo! We appreciate your contribution to the Physiopy community!
   
