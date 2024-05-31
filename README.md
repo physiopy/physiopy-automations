@@ -1,7 +1,7 @@
 # physiopy-test-workflows
 A place to test [github actions & workflows](https://docs.github.com/en/actions), and perhaps also automation related to the project board 
 
-## Workflows implemented in this test repo
+## Workflows implemented in this test repo :tada:
 <!-- Some workflows exist in the physiopy repos that are not listed here -->
 
 ### [auto-author-assign.yml](.github/workflows/auto-author-assign.yml) 
