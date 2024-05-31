@@ -4,6 +4,9 @@ A place to test [github actions & workflows](https://docs.github.com/en/actions)
 ## Workflows implemented in this test repo :tada:
 <!-- Some workflows exist in the physiopy repos that are not listed here -->
 
+### welcome messages for first issue, first PR, first merge
+- in progress
+
 ### [auto-author-assign.yml](.github/workflows/auto-author-assign.yml) 
 - this workflow automatically makes the author of a PR or Issue the assignee of it. This should facilitate integration with the project board, because the project board reads the 'Assignee' label
 
