@@ -6,7 +6,7 @@ A place to test [github actions & workflows](https://docs.github.com/en/actions)
 
 ### [welcome bot](https://github.com/physiopy/physiopy-test-workflows/blob/master/.github/config.yml)
 - in progress - https://github.com/physiopy/physiopy-test-workflows/issues/13
-- welcome messages for first issue, first PR, first merge
+- automatically post welcome messages when a contributor posts their first issue, first PR, and merges first PR
 
 ### [auto-author-assign.yml](.github/workflows/auto-author-assign.yml) 
 - this workflow automatically makes the author of a PR or Issue the assignee of it. This should facilitate integration with the project board, because the project board reads the 'Assignee' label
