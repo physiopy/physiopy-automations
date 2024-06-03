@@ -5,7 +5,7 @@ A place to test [github actions & workflows](https://docs.github.com/en/actions)
 <!-- Some workflows exist in the physiopy repos that are not listed here -->
 
 ### [welcome bot](https://github.com/physiopy/physiopy-test-workflows/blob/master/.github/config.yml)
-- in progress
+- in progress - https://github.com/physiopy/physiopy-test-workflows/issues/13
 - welcome messages for first issue, first PR, first merge
 
 ### [auto-author-assign.yml](.github/workflows/auto-author-assign.yml) 
