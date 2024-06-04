@@ -10,7 +10,7 @@ A place to test [github actions & workflows](https://docs.github.com/en/actions)
 ### [auto-label.yml](.github/workflows/auto-label.yml) 
 - this workflow automatically assigns labels to a PR if the PR edits a specific file. The mapping between file and label is defined in [labeler.yml](.github/labeler.yml) and this mapping/dictionary file can be expanded for each physiopy repo
 
-### [welcome bot](https://github.com/physiopy/physiopy-test-workflows/blob/master/.github/config.yml)
+### welcome bot, defined in [config.yml](https://github.com/physiopy/physiopy-test-workflows/blob/master/.github/config.yml)
 - in progress - https://github.com/physiopy/physiopy-test-workflows/issues/13
 - automatically post welcome messages when a contributor posts their first issue, first PR, and merges first PR
 
