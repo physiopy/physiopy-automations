@@ -17,7 +17,7 @@ A place to test [github actions & workflows](https://docs.github.com/en/actions)
 
 ### welcome bot, defined in [config.yml](https://github.com/physiopy/physiopy-test-workflows/blob/master/.github/config.yml)
 - In progress - https://github.com/physiopy/physiopy-test-workflows/issues/13
-- This bot automatically post welcome messages when a contributor posts their first issue, first PR, and merges first PR
+- This bot automatically posts welcome and thank you messages when a contributor posts their first issue, first PR, and merges first PR
 - This is a nice way to welcome and thank new contributors, but also acts as an opportunity to direct them towards the relevant contributor guidelines, as needed. 
 
 ## Are the workflows above implemented in other physiopy repos?
