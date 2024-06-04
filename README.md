@@ -4,26 +4,26 @@ A place to test [github actions & workflows](https://docs.github.com/en/actions)
 ## Workflows implemented in this test repo :tada:
 <!-- Some workflows exist in the physiopy repos that are not listed here -->
 
-### [welcome bot](https://github.com/physiopy/physiopy-test-workflows/blob/master/.github/config.yml)
-- in progress - https://github.com/physiopy/physiopy-test-workflows/issues/13
-- automatically post welcome messages when a contributor posts their first issue, first PR, and merges first PR
-
 ### [auto-author-assign.yml](.github/workflows/auto-author-assign.yml) 
 - this workflow automatically makes the author of a PR or Issue the assignee of it. This should facilitate integration with the project board, because the project board reads the 'Assignee' label
 
 ### [auto-label.yml](.github/workflows/auto-label.yml) 
-- this workflow automatically assigns labels to a PR if the PR edits a specific file. The mapping between file and label is defined in [labeler.yml](.github/labeler.yml) and this mapping/dictionary file can be expanded for each physiopy repo 
+- this workflow automatically assigns labels to a PR if the PR edits a specific file. The mapping between file and label is defined in [labeler.yml](.github/labeler.yml) and this mapping/dictionary file can be expanded for each physiopy repo
+
+### [welcome bot](https://github.com/physiopy/physiopy-test-workflows/blob/master/.github/config.yml)
+- in progress - https://github.com/physiopy/physiopy-test-workflows/issues/13
+- automatically post welcome messages when a contributor posts their first issue, first PR, and merges first PR
 
 ## Are the workflows above implemented in other physiopy repos?
  
-| Repo                         | auto-author-assign | auto-label |
-| --                           | --                 | -- |
-| physiopy-repository-template | yes                |yes |
-| physiopy.github.io           | pending PR         | pending PR |
-| physiopy-community-guidelines| yes                |yes |
-| physiopy                     | pending PR         | pending PR |
-| phys2bids                    | yes                | yes     |
-| peakdet                      | pending PR         | pending PR |
-| physioqc                     | pending PR         | pending PR |
-| phys2denoise                 | pending PR         | pending PR |
+| Repo                         | auto-author-assign | auto-label | welcome bot |
+| --                           | --                 | -- | -- |
+| physiopy-repository-template | yes                |yes | no |
+| physiopy.github.io           | pending PR         | pending PR |no |
+| physiopy-community-guidelines| yes                |yes |no |
+| physiopy                     | pending PR         | pending PR |no |
+| phys2bids                    | yes                | yes     |no |
+| peakdet                      | pending PR         | pending PR |no |
+| physioqc                     | pending PR         | pending PR |no |
+| phys2denoise                 | pending PR         | pending PR |no |
 
