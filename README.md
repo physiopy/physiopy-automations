@@ -29,7 +29,7 @@ A place to test [github actions & workflows](https://docs.github.com/en/actions)
 | physiopy-community-guidelines| yes                |yes |no |
 | physiopy                     | pending PR         | pending PR |no |
 | phys2bids                    | yes                | yes     |no |
-| peakdet                      | pending PR         | pending PR |no |
+| peakdet                      | yes                | yes |no |
 | physioqc                     | pending PR         | pending PR |no |
 | phys2denoise                 | pending PR         | pending PR |no |
 
