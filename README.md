@@ -30,6 +30,6 @@ A place to test [github actions & workflows](https://docs.github.com/en/actions)
 | physiopy                     | pending PR         | pending PR |no |
 | phys2bids                    | yes                | yes     |no |
 | peakdet                      | yes                | yes |no |
-| physioqc                     | pending PR         | pending PR |no |
-| phys2denoise                 | pending PR         | pending PR |no |
+| physioqc                     | yes                | yes |no |
+| phys2denoise                 | yes                | yes |no |
 
