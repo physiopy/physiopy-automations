@@ -4,6 +4,9 @@ authors:
 - family-names: "Stickland"
   given-names: "Rachael"
   orcid: "https://orcid.org/0000-0003-3398-4272"
+  affiliation: 
+    - "The Alan Turing Institute"
+    - "Northwestern University"
 - family-names: "Picard"
   given-names: "Marie-Eve"
 title: "physiopy-test-workflows"
