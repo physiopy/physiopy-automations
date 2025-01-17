@@ -4,10 +4,15 @@ authors:
 - family-names: "Stickland"
   given-names: "Rachael"
   orcid: "https://orcid.org/0000-0003-3398-4272"
-  affiliation: "The Alan Turing Institute"
+  affiliation: "The Alan Turing Institute; Northwestern University"
 - family-names: "Picard"
   given-names: "Marie-Eve"
+  orcid: "https://orcid.org/0009-0001-2412-7829"
   affiliation: "Université de Montréal"
+- family-names: "Moia"
+  given-names: "Stefano"
+  orcid: "https://orcid.org/0000-0002-2553-3327"
+  affiliation: "Maastricht University; University of Geneva; Basque Center on Cognition, Brain and Language; Northwestern University"
 title: "physiopy-test-workflows"
 version: 0.1.2
 doi: 110.5072/zenodo.153330
