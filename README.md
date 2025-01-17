@@ -1,5 +1,5 @@
 # physiopy-test-workflows
-This is a place to test [github actions & workflows](https://docs.github.com/en/actions), and perhaps also automation related to the project board 
+This is a place to test [github actions & workflows](https://docs.github.com/en/actions), and perhaps also automation related to the project board.
 
 ## Workflows implemented in this test repo :tada:
 <!-- Some workflows exist in the physiopy repos that are not listed here -->
