@@ -4,9 +4,7 @@ authors:
 - family-names: "Stickland"
   given-names: "Rachael"
   orcid: "https://orcid.org/0000-0003-3398-4272"
-  affiliations: 
-    - name: "The Alan Turing Institute
-    - name: "Northwestern University"
+  affiliation: "The Alan Turing Institute; "Northwestern University"
 - family-names: "Picard"
   given-names: "Marie-Eve"
   affiliation: "Université de Montréal"
