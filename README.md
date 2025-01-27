@@ -16,19 +16,23 @@ This is a place to test [github actions & workflows](https://docs.github.com/en/
 - The mapping between file and label is defined in [labeler.yml](.github/labeler.yml) and this mapping/dictionary file can be expanded for each physiopy repo
 
 ### welcome bot, defined in [config.yml](https://github.com/physiopy/physiopy-test-workflows/blob/master/.github/config.yml)
-- In progress - https://github.com/physiopy/physiopy-test-workflows/issues/13
 - This bot automatically posts welcome and thank you messages when a contributor posts their first issue, first PR, and merges first PR
-- This is a nice way to welcome and thank new contributors, but also acts as an opportunity to direct them towards the relevant contributor guidelines, as needed. 
+- This is a nice way to welcome and thank new contributors, but also acts as an opportunity to direct them towards the relevant contributor guidelines, as needed.
+
+Example:
+
+![image](https://github.com/user-attachments/assets/b5fa9565-851b-4c0a-8b97-e9e414276b7d)
+
 
 ## Are the workflows above implemented in other physiopy repos?
  
 | Repo                         | auto-author-assign | auto-label | welcome bot |
 | --                           | --                 | -- | -- |
 | physiopy-repository-template | yes                |yes | no |
-| physiopy.github.io           | pending PR         | pending PR |no |
+| physiopy.github.io           | [pending PR](https://github.com/physiopy/physiopy.github.io/pull/52) | [pending PR](https://github.com/physiopy/physiopy.github.io/pull/52) |no |
 | physiopy-community-guidelines| yes                |yes |no |
-| physiopy                     | pending PR         | pending PR |no |
-| phys2bids                    | yes                | yes     |no |
+| physiopy                     | [pending PR](https://github.com/physiopy/physiopy/pull/11)| [pending PR](https://github.com/physiopy/physiopy/pull/11) |no |
+| phys2bids                    | yes                | yes     | [pending PR](https://github.com/physiopy/phys2bids/pull/476) |
 | peakdet                      | yes                | yes |no |
 | physioqc                     | yes                | yes |no |
 | phys2denoise                 | yes                | yes |no |
