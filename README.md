@@ -34,17 +34,18 @@ Example:
 
 ## Are the workflows above implemented in other physiopy repos?
  
-| Repo                         | auto-author-assign | auto-label | welcome bot |
-| --                           | --                 | -- | -- |
-| physiopy-repository-template | yes                |yes | no |
-| physiopy.github.io           | [pending PR](https://github.com/physiopy/physiopy.github.io/pull/52) | [pending PR](https://github.com/physiopy/physiopy.github.io/pull/52) |no |
-| physiopy-community-guidelines| yes                |yes |no |
-| physiopy                     | [pending PR](https://github.com/physiopy/physiopy/pull/11)| [pending PR](https://github.com/physiopy/physiopy/pull/11) |no |
-| phys2bids                    | yes                | yes     | [pending PR](https://github.com/physiopy/phys2bids/pull/476) |
-| peakdet                      | yes                | yes |no |
-| physioqc                     | yes                | yes |no |
-| phys2denoise                 | yes                | yes |no |
+| Repo                         | AllContributors | auto-author-assign | auto-label | welcome bot |
+| --                           | --              | -- | -- | -- |
+| physiopy-repository-template | yes? | yes                |yes | no |
+| physiopy.github.io           | no | [pending PR](https://github.com/physiopy/physiopy.github.io/pull/52) | [pending PR](https://github.com/physiopy/physiopy.github.io/pull/52) |no |
+| physiopy-community-guidelines| yes | yes                |yes |no |
+| physiopy                     | no | [pending PR](https://github.com/physiopy/physiopy/pull/11)| [pending PR](https://github.com/physiopy/physiopy/pull/11) |no |
+| phys2bids                    | yes | yes                | yes     | [pending PR](https://github.com/physiopy/phys2bids/pull/476) |
+| peakdet                      | yes | yes                | yes |no |
+| physioqc                     | yes | yes                | yes |no |
+| phys2denoise                 | yes | yes                | yes |no |
 
+**Please note:** there are many more workflows used within physiopy repos, [we are working towards documenting them all in this README](https://github.com/physiopy/physiopy-test-workflows/issues/16).  
 
 ## Contributors ✨
 
