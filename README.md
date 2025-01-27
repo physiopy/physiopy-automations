@@ -1,5 +1,9 @@
 # physiopy-test-workflows
-This is a place to test [github actions & workflows](https://docs.github.com/en/actions), and perhaps also automation related to the project board.
+
+This repository has two purposes: 
+
+- A place to test [github actions & workflows](https://docs.github.com/en/actions) for the first time, and perhaps also automation related to the project board.
+- A place to document what each automated workflow/action is doing and why, for physiopy contributors to have a better understanding of their usage across the physiopy organisation. 
 
 ## Workflows implemented in this test repo :tada:
 <!-- Some workflows exist in the physiopy repos that are not listed here -->
