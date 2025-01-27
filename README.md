@@ -56,7 +56,7 @@ This project follows the [all-contributors](https://github.com/all-contributors/
   <tbody>
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/RayStick"><img src="https://avatars.githubusercontent.com/u/50215726?v=4?s=100" width="100px;" alt="Rachael Stickland"/><br /><sub><b>Rachael Stickland</b></sub></a><br /><a href="https://github.com/physiopy/physiopy-test-workflows/commits?author=RayStick" title="Code">💻</a> <a href="#maintenance-RayStick" title="Maintenance">🚧</a> <a href="https://github.com/physiopy/physiopy-test-workflows/commits?author=RayStick" title="Documentation">📖</a></td>
-      <td align="center" valign="top" width="14.28%"><a href="https://github.com/me-pic"><img src="https://avatars.githubusercontent.com/u/77584086?v=4?s=100" width="100px;" alt="Marie-Eve Picard"/><br /><sub><b>Marie-Eve Picard</b></sub></a><br /><a href="https://github.com/physiopy/physiopy-test-workflows/commits?author=me-pic" title="Tests">⚠️</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/me-pic"><img src="https://avatars.githubusercontent.com/u/77584086?v=4?s=100" width="100px;" alt="Marie-Eve Picard"/><br /><sub><b>Marie-Eve Picard</b></sub></a><br /><a href="https://github.com/physiopy/physiopy-test-workflows/commits?author=me-pic" title="userTesting">📓</a></td>
     </tr>
   </tbody>
 </table>
