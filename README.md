@@ -16,7 +16,7 @@ This repository has two purposes:
 This app helps recognise diverse contributions to physiopy repos, using this [emoji key](https://allcontributors.org/docs/en/emoji-key). How it works:
 - Manually comment on an issue or pull request with: `@all-contributors please add @username for code and documentation`
 - This will automatically open up a pull request for you to review
-- Once this pull request is reviewed and merged, the [Contributors section](https://github.com/physiopy/physiopy-test-workflows/edit/master/README.md#contributors-) at the bottom of the README will be updated
+- Review and merge this pull request and see that the [Contributors section](https://github.com/physiopy/physiopy-test-workflows/edit/master/README.md#contributors-) at the bottom of the README is updated
 
 ### [auto-author-assign.yml](.github/workflows/auto-author-assign.yml) 
 This workflow automatically give the author of a PR or Issue the 'Assignee' label. Previously to this, you had to manually add the 'Assignee' label. If this was forgotten, a PR or Issue can sit there without an Assignee, and may not properly show up on project board (or when you filter Issues/PRs by Assignee). It seems sensible to make the author the assignee in the first instance, but this can be manually changed for situations where someone else should be the assignee, or if the assignee changes. This should facilitate integration with the project board, because the project board reads the 'Assignee' label in various ways.
