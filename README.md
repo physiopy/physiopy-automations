@@ -5,7 +5,7 @@
 
 This repository has two purposes: 
 
-- A place to test [github actions & workflows](https://docs.github.com/en/actions), and perhaps also automation related to the project board.
+- A place to test [github actions & workflows](https://docs.github.com/en/actions), and app automations in general (perhaps also automation related to the project board).
 - A place to document what each automated workflow/action is doing and why, for physiopy contributors to have a better understanding of their usage across the physiopy organisation. 
 
 ## Workflows implemented in this test repo :tada:
