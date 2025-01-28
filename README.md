@@ -15,20 +15,20 @@ This `physiopy-automations` repository has two purposes:
 
 ## Automations implemented in this repo :tada:
 
-### [AllContributors](https://github.com/apps/allcontributors) app
+### 1 - [AllContributors](https://github.com/apps/allcontributors) app
 
 This app helps recognise diverse contributions to physiopy repos, using this [emoji key](https://allcontributors.org/docs/en/emoji-key). How it works:
 - Manually comment on an issue or pull request with: `@all-contributors please add @username for code and documentation`
 - This will automatically open up a pull request for you to review
 - Review and merge this pull request and see that the [Contributors section](#contributors-) at the bottom of the README is updated
 
-### [auto-author-assign.yml](.github/workflows/auto-author-assign.yml) 
+### 2 - [auto-author-assign.yml](.github/workflows/auto-author-assign.yml) 
 This workflow automatically gives the author of a PR or Issue the 'Assignee' label. This should facilitate integration with the project board, because the project board reads the 'Assignee' label in various ways. Previously to this, you had to manually add the 'Assignee' label. If this was forgotten, a PR or Issue can sit there without an Assignee, and may not properly show up on project board (or when you filter Issues/PRs by Assignee). It seems sensible to make the author the assignee in the first instance, but this can be manually changed for situations where someone else should be the assignee, or if the assignee changes. 
 
-### [auto-label.yml](.github/workflows/auto-label.yml) 
+### 3 - [auto-label.yml](.github/workflows/auto-label.yml) 
 This workflow automatically assigns labels to a PR if the PR edits a specific file. For example, if the README file is edited, the 'Documentation' label will be automatically assigned. Previously to this, the author of the PR has to manually add labels (Note: some labels still need to be manually added, this just does the obvious ones). The mapping between file and label is defined in [labeler.yml](.github/labeler.yml) and this mapping/dictionary file can be expanded for each physiopy repo. 
 
-### welcome bot app, defined in [config.yml](https://github.com/physiopy/physiopy-test-workflows/blob/master/.github/config.yml)
+### 4 - welcome bot app, defined in [config.yml](https://github.com/physiopy/physiopy-test-workflows/blob/master/.github/config.yml)
 This bot automatically posts welcome and thank you messages when a contributor posts their first issue, first PR, and merges first PR. This is a nice way to welcome and thank new contributors, but also acts as an opportunity to direct them towards the relevant contributor guidelines, as needed.
 
 Example:
@@ -38,16 +38,16 @@ Example:
 
 ## Which automations above are implemented in other physiopy repos?
  
-| Repo                         | AllContributors | auto-author-assign | auto-label | welcome bot |
-| --                           | --              | -- | -- | -- |
-| physiopy-repository-template | yes? | yes                |yes | no |
+|                              | 1 | 2 | 3 | 4 |
+| --                           | - | - | - | - |
+| physiopy-repository-template | yes? | yes |yes | no |
 | physiopy.github.io           | no | [pending PR](https://github.com/physiopy/physiopy.github.io/pull/52) | [pending PR](https://github.com/physiopy/physiopy.github.io/pull/52) |no |
-| physiopy-community-guidelines| yes | yes                |yes |no |
+| physiopy-community-guidelines| yes | yes | yes | no |
 | physiopy                     | no | [pending PR](https://github.com/physiopy/physiopy/pull/11)| [pending PR](https://github.com/physiopy/physiopy/pull/11) |no |
-| phys2bids                    | yes | yes                | yes     | [pending PR](https://github.com/physiopy/phys2bids/pull/476) |
-| peakdet                      | yes | yes                | yes |no |
-| physioqc                     | yes | yes                | yes |no |
-| phys2denoise                 | yes | yes                | yes |no |
+| phys2bids                    | yes | yes | yes | [pending PR](https://github.com/physiopy/phys2bids/pull/476) |
+| peakdet                      | yes | yes | yes |no |
+| physioqc                     | yes | yes | yes |no |
+| phys2denoise                 | yes | yes | yes |no |
 
 **Please note:** there are many more workflows used within physiopy repos, [we are working towards documenting them all in this README](https://github.com/physiopy/physiopy-test-workflows/issues/16). Check out the 
 [physiopy-repository-template](https://github.com/physiopy/physiopy-repository-template) to see some core repo set-up.
