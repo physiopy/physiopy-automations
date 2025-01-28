@@ -45,7 +45,8 @@ Example:
 | physioqc                     | yes | yes                | yes |no |
 | phys2denoise                 | yes | yes                | yes |no |
 
-**Please note:** there are many more workflows used within physiopy repos, [we are working towards documenting them all in this README](https://github.com/physiopy/physiopy-test-workflows/issues/16).  
+**Please note:** there are many more workflows used within physiopy repos, [we are working towards documenting them all in this README](https://github.com/physiopy/physiopy-test-workflows/issues/16). Check out the 
+[physiopy-repository-template](https://github.com/physiopy/physiopy-repository-template) to see some core repo set-up.
 
 ## Contributors ✨
 
