@@ -3,13 +3,16 @@
 [![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
-This repository has two purposes: 
+❗Help❗the bots are everywhere. 
 
-- A place to test [github actions & workflows](https://docs.github.com/en/actions), and app automations in general (perhaps also automation related to the project board).
-- A place to document what each automated workflow/action is doing and why, for physiopy contributors to have a better understanding of their usage across the physiopy organisation. 
+Don't worry, on GitHub there are many ways to automate manual tasks that users commonly do. The maintainers of the GitHub repo have chosen to add these automations in order to save time and to ensure accuracy and consistency in the execution of a task. This automation is commonly done by writing workflows made up of [GitHub Actions](https://docs.github.com/en/actions), and with the use of third-party GitHub Apps which utilises the GitHub API. 
 
-## Workflows implemented in this test repo :tada:
-<!-- Some workflows exist in the physiopy repos that are not listed here -->
+This `physiopy-automations` repository has two purposes: 
+
+- A place to test github automations
+- A place to document what each automation is doing and why, for physiopy contributors to have a better understanding of their usage across the physiopy organisation. 
+
+## Automations implemented in this repo :tada:
 
 ### [AllContributors](https://github.com/apps/allcontributors) app
 
@@ -32,7 +35,7 @@ Example:
 ![image](https://github.com/user-attachments/assets/b5fa9565-851b-4c0a-8b97-e9e414276b7d)
 
 
-## Are the workflows above implemented in other physiopy repos?
+## Which automations above are implemented in other physiopy repos?
  
 | Repo                         | AllContributors | auto-author-assign | auto-label | welcome bot |
 | --                           | --              | -- | -- | -- |
