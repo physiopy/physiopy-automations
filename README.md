@@ -15,6 +15,9 @@ This `physiopy-automations` repository has two purposes:
 
 ## Automations implemented in this repo :tada:
 
+> **Please note:** there are many more workflows used within physiopy repos, [we are working towards documenting them all in this README](https://github.com/physiopy/physiopy-test-workflows/issues/16). Check out the 
+[physiopy-repository-template](https://github.com/physiopy/physiopy-repository-template) to see some core repo set-up.
+
 ### 1 - [AllContributors](https://github.com/apps/allcontributors) app
 
 This app helps recognise diverse contributions to physiopy repos, using this [emoji key](https://allcontributors.org/docs/en/emoji-key). How it works:
@@ -51,8 +54,6 @@ We use the third-party data archiving tool Zenodo to create a DOI that can be us
 | physioqc                     | yes | yes | yes |no |
 | phys2denoise                 | yes | yes | yes |no |
 
-**Please note:** there are many more workflows used within physiopy repos, [we are working towards documenting them all in this README](https://github.com/physiopy/physiopy-test-workflows/issues/16). Check out the 
-[physiopy-repository-template](https://github.com/physiopy/physiopy-repository-template) to see some core repo set-up.
 
 ## Contributors ✨
 
