@@ -49,7 +49,7 @@ We use the third-party data archiving tool Zenodo to create a DOI that can be us
 | physiopy.github.io           | no | [pending PR](https://github.com/physiopy/physiopy.github.io/pull/52) | [pending PR](https://github.com/physiopy/physiopy.github.io/pull/52) |no |
 | physiopy-community-guidelines| yes | yes | yes | no |
 | physiopy                     | no | [pending PR](https://github.com/physiopy/physiopy/pull/11)| [pending PR](https://github.com/physiopy/physiopy/pull/11) |no |
-| phys2bids                    | yes | yes | yes | [pending PR](https://github.com/physiopy/phys2bids/pull/476) |
+| phys2bids                    | yes | yes | yes | yes |
 | peakdet                      | yes | yes | yes |no |
 | physioqc                     | yes | yes | yes |no |
 | phys2denoise                 | yes | yes | yes |no |
