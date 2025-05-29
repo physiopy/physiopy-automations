@@ -50,10 +50,11 @@ We use the third-party data archiving tool Zenodo to create a DOI that can be us
 | physiopy-community-guidelines| yes | yes | yes | no |
 | physiopy                     | no | [pending PR](https://github.com/physiopy/physiopy/pull/11)| [pending PR](https://github.com/physiopy/physiopy/pull/11) |no |
 | phys2bids                    | yes | yes | yes | yes |
-| peakdet                      | yes | yes | yes |no |
+| peakdet (now prep4phys?)     | yes | yes | yes |no |
 | physioqc                     | yes | yes | yes |no |
 | phys2denoise                 | yes | yes | yes |no |
-
+| physiopy-governance          | x | x | x |x | 
+| physutils                    | x | x | x |x |
 
 ## Contributors ✨
 
