@@ -53,7 +53,7 @@ We use the third-party data archiving tool Zenodo to create a DOI that can be us
 | peakdet (now prep4phys?)     | yes | yes | yes |no |
 | physioqc                     | yes | yes | yes |no |
 | phys2denoise                 | yes | yes | yes |no |
-| physiopy-governance          | x | x | x |x | 
+| physiopy-governance          | no | no | no | no | 
 | physutils                    | x | x | x |x |
 
 ## Contributors ✨
