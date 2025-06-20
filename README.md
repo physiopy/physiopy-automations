@@ -15,8 +15,7 @@ This `physiopy-automations` repository has two purposes:
 
 ## Automations implemented in this repo :tada:
 
-> **Please note:** there are many more workflows used within physiopy repos, [we are working towards documenting them all in this README](https://github.com/physiopy/physiopy-test-workflows/issues/16). Check out the 
-[physiopy-repository-template](https://github.com/physiopy/physiopy-repository-template) to see some core repo set-up.
+> **Important:** if we like the automations below, we should make sure they are implemented in [physiopy-repository-template](https://github.com/physiopy/physiopy-repository-template) so new repos have these automatically. There are many more workflows used across physiopy repos, [we are working towards documenting them all in this README](https://github.com/physiopy/physiopy-test-workflows/issues/16), some of which are included in the template repo and some which are not. We aim to document more of the core workflows below, as we only have a few so far. 
 
 ### 1 - [AllContributors](https://github.com/apps/allcontributors) app
 
