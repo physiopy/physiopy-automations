@@ -2,7 +2,7 @@
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 [![All Contributors](https://img.shields.io/badge/all_contributors-4-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END --> 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10581500.svg)](https://zenodo.org/records/14753284)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10581500.svg)](https://zenodo.org/records/15847444)
 
 ❗Help❗the bots are everywhere. 
 
