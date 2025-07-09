@@ -40,21 +40,6 @@ Example:
 ### 5 - Zenodo with [CFF file](https://github.com/physiopy/physiopy-automations/blob/master/CITATION.cff)
 We use the third-party data archiving tool Zenodo to create a DOI that can be used for archiving and citing content. To set-up Zenodo on this GitHub we followed [these steps](https://docs.github.com/en/repositories/archiving-a-github-repository/referencing-and-citing-content). Every time a new release is created, a new DOI will be issued and the [Zenodo page](https://zenodo.org/records/14753284) will be automatically updated. See the badge at the top of this README, that visitors can easily click on to reach this Zenodo page. Zenodo makes some guesses based on repo information, to populate title and authors etc. However, it is better to define this in the [CFF file](https://github.com/physiopy/physiopy-automations/blob/master/CITATION.cff) so Zenodo reports this accurately and in the way we would like. 
 
-## Which automations above are implemented in other physiopy repos?
- 
-|                              | 1 | 2 | 3 | 4 |
-| --                           | - | - | - | - |
-| physiopy-repository-template | yes? | yes |yes | no |
-| physiopy.github.io           | no | [pending PR](https://github.com/physiopy/physiopy.github.io/pull/52) | [pending PR](https://github.com/physiopy/physiopy.github.io/pull/52) |no |
-| physiopy-community-guidelines| yes | yes | yes | no |
-| physiopy                     | no | [pending PR](https://github.com/physiopy/physiopy/pull/11)| [pending PR](https://github.com/physiopy/physiopy/pull/11) |no |
-| phys2bids                    | yes | yes | yes | yes |
-| peakdet (now prep4phys?)     | yes | yes | yes |no |
-| physioqc                     | yes | yes | yes |no |
-| phys2denoise                 | yes | yes | yes |no |
-| physiopy-governance          | no | no | no | no | 
-| physutils                    | x | x | x |x |
-
 ## Contributors ✨
 
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification([emoji key](https://allcontributors.org/docs/en/emoji-key)). Contributions of any kind welcome!
