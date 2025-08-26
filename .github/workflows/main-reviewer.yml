@@ -2,7 +2,7 @@ name: Reviewer Checklist
 
 on:
   pull_request:
-    types: [assigned, review_requested, review_request_removed]
+    types: [unassigned, assigned, review_requested, review_request_removed]
 
 jobs:
   checklist:
