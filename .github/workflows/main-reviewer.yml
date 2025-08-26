@@ -38,7 +38,7 @@ jobs:
         run: |
           TEMPLATE=${{ env.TEMPLATE }}
           ASSIGNEE=${{ env.ASSIGNEE }}
-          sed "s/__MAINREV__/$ASSIGNEE/g" .github/workflows/$TEMPLATE > filled_checklist.md
+          sed "s/@__REV__/$ASSIGNEE/g" .github/workflows/$TEMPLATE > filled_checklist.md
 
       # Step 5: Post the filled checklist as a comment
       - name: Post checklist as a comment
