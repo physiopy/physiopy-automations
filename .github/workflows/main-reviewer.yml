@@ -19,7 +19,7 @@ jobs:
       - name: Replace reviewer name in checklist template
         run: |
           ASSIGNEE=${{ env.ASSIGNEE }}
-          sed "s/__MAINREV__/$ASSIGNEE/g" .github/workflows/main_rev_checklist.md > filled_checklist.md
+          sed "s/__MAINREV__/$ASSIGNEE/g" main_rev_checklist.md > filled_checklist.md
 
       # Step 3: Post the filled checklist as a comment on the PR
       - name: Post checklist as a comment
