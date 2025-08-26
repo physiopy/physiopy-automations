@@ -9,23 +9,26 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # Step 1: Extract the main reviewer (assignee) and PR details
+      # Step 1: Check out the repository
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      # Step 2: Extract the main reviewer (assignee) and PR details
       - name: Extract PR details
         id: pr_details
         run: |
           echo "ASSIGNEE=$(jq -r '.assignee.login' < $GITHUB_EVENT_PATH)" >> $GITHUB_ENV
 
-      # Step 2: Replace the placeholder in the checklist template
+      # Step 3: Replace the placeholder in the checklist template
       - name: Replace reviewer name in checklist template
         run: |
           ASSIGNEE=${{ env.ASSIGNEE }}
           sed "s/__MAINREV__/$ASSIGNEE/g" .github/workflows/main_rev_checklist.md > filled_checklist.md
 
-      # Step 3: Post the filled checklist as a comment on the PR
+      # Step 4: Post the filled checklist as a comment
       - name: Post checklist as a comment
         uses: peter-evans/create-or-update-comment@v3
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           issue-number: ${{ github.event.pull_request.number }}
-          body: |
-            $(cat filled_checklist.md)
+          body-path: filled_checklist.md

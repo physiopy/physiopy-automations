@@ -1,6 +1,6 @@
 Hello @__MAINREV__!
 
-You've been assigned to this PR, which means that you've been nominated Main Reviewer! (Lucky you! :ta-da: :ta-da: :ta-da:)
+You've been assigned to this PR, which means that you've been nominated Main Reviewer! Lucky you!
 
 As a Main Reviewer, you are slightly more responsible for the quality of this PR than your fellow Reviewers. If you have any doubt, check [this section on reviewing](https://phys2bids.readthedocs.io/en/latest/contributorfile.html#reviewing) and [this section on being the Main Reviewer](https://phys2bids.readthedocs.io/en/latest/contributorfile.html#mainreviewer) of the documents.
 
