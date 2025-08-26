@@ -44,7 +44,7 @@ We use the third-party data archiving tool Zenodo to create a DOI that can be us
 
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification([emoji key](https://allcontributors.org/docs/en/emoji-key)). Contributions of any kind welcome!
 
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section! -->
 <!-- prettier-ignore-start -->
 <!-- markdownlint-disable -->
 <table>
