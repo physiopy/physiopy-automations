@@ -32,6 +32,7 @@ jobs:
             echo "TEMPLATE=main_rev_checklist.md" >> $GITHUB_ENV
           else
             echo "TEMPLATE=rev_checklist.md" >> $GITHUB_ENV
+          fi
 
       # Step 4: Replace the placeholder in the selected checklist template
       - name: Replace reviewer name in checklist template
