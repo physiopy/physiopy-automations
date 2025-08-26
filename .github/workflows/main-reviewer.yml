@@ -1,8 +1,8 @@
-name: Main Reviewer Checklist
+name: Reviewer Checklist
 
 on:
   pull_request:
-    types: [assigned]
+    types: [assigned, review_requested, review_request_removed]
 
 jobs:
   checklist:
@@ -13,19 +13,34 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      # Step 2: Extract the main reviewer (assignee) and PR details
+      # Step 2: Extract the assignee, reviewers, and PR details
       - name: Extract PR details
         id: pr_details
         run: |
-          echo "ASSIGNEE=$(jq -r '.assignee.login' < $GITHUB_EVENT_PATH)" >> $GITHUB_ENV
+          ASSIGNEE=$(jq -r '.assignee.login // ""' < $GITHUB_EVENT_PATH)
+          REVIEWERS=$(jq -r '.pull_request.requested_reviewers[].login // ""' < $GITHUB_EVENT_PATH)
+          echo "ASSIGNEE=$ASSIGNEE" >> $GITHUB_ENV
+          echo "REVIEWERS=$REVIEWERS" >> $GITHUB_ENV
 
-      # Step 3: Replace the placeholder in the checklist template
-      - name: Replace reviewer name in checklist template
+      # Step 3: Determine the checklist template to use
+      - name: Determine checklist template
+        id: checklist_template
         run: |
           ASSIGNEE=${{ env.ASSIGNEE }}
-          sed "s/__MAINREV__/$ASSIGNEE/g" .github/workflows/main_rev_checklist.md > filled_checklist.md
+          REVIEWERS=${{ env.REVIEWERS }}
+          if [[ "$REVIEWERS" == *"$ASSIGNEE"* && -n "$ASSIGNEE" ]]; then
+            echo "TEMPLATE=main_rev_checklist.md" >> $GITHUB_ENV
+          else
+            echo "TEMPLATE=rev_checklist.md" >> $GITHUB_ENV
 
-      # Step 4: Post the filled checklist as a comment
+      # Step 4: Replace the placeholder in the selected checklist template
+      - name: Replace reviewer name in checklist template
+        run: |
+          TEMPLATE=${{ env.TEMPLATE }}
+          ASSIGNEE=${{ env.ASSIGNEE }}
+          sed "s/__MAINREV__/$ASSIGNEE/g" .github/workflows/$TEMPLATE > filled_checklist.md
+
+      # Step 5: Post the filled checklist as a comment
       - name: Post checklist as a comment
         uses: peter-evans/create-or-update-comment@v3
         with:
