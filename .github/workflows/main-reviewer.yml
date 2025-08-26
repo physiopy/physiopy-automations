@@ -22,20 +22,31 @@ jobs:
           echo "ASSIGNEE=$ASSIGNEE" >> $GITHUB_ENV
           echo "REVIEWERS=$REVIEWERS" >> $GITHUB_ENV
 
-      # Step 3: Determine the checklist template to use
-      - name: Determine checklist template
+      # Step 3: Determine the checklist template or skip posting
+      - name: Determine checklist template or skip
         id: checklist_template
         run: |
-          ASSIGNEE=${{ env.ASSIGNEE }}
-          REVIEWERS=${{ env.REVIEWERS }}
+          ASSIGNEE="${{ env.ASSIGNEE }}"
+          REVIEWERS="${{ env.REVIEWERS }}"
+          
+          # If assignee is also a reviewer, use main_rev_checklist.md
           if [[ "$REVIEWERS" == *"$ASSIGNEE"* && -n "$ASSIGNEE" ]]; then
             echo "TEMPLATE=main_rev_checklist.md" >> $GITHUB_ENV
-          else
+            echo "POST_CHECKLIST=true" >> $GITHUB_ENV
+          # If assignee is set but NOT a reviewer, skip posting
+          elif [[ -n "$ASSIGNEE" && "$REVIEWERS" != *"$ASSIGNEE"* ]]; then
+            echo "POST_CHECKLIST=false" >> $GITHUB_ENV
+          # If there are reviewers (and assignee is empty or not a reviewer), use rev_checklist.md
+          elif [[ -n "$REVIEWERS" ]]; then
             echo "TEMPLATE=rev_checklist.md" >> $GITHUB_ENV
+            echo "POST_CHECKLIST=true" >> $GITHUB_ENV
+          else
+            echo "POST_CHECKLIST=false" >> $GITHUB_ENV
           fi
 
       # Step 4: Replace the placeholder in the selected checklist template
       - name: Replace reviewer name in checklist template
+        if: env.POST_CHECKLIST == 'true'
         run: |
           TEMPLATE=${{ env.TEMPLATE }}
           ASSIGNEE=${{ env.ASSIGNEE }}
@@ -43,6 +54,7 @@ jobs:
 
       # Step 5: Post the filled checklist as a comment
       - name: Post checklist as a comment
+        if: env.POST_CHECKLIST == 'true'
         uses: peter-evans/create-or-update-comment@v3
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
