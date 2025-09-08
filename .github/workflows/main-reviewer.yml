@@ -25,29 +25,20 @@ jobs:
             SANITIZED_REVIEWERS="$SANITIZED_REVIEWERS $(sanitize "$r")"
           done
           NEW_REVIEWER=$(jq -r '.requested_reviewer.login' < $GITHUB_EVENT_PATH)
-          ACTOR=$(jq -r '.sender.login' < $GITHUB_EVENT_PATH)
           SANITIZED_NEW_REVIEWER=$(sanitize "$NEW_REVIEWER")
-          SANITIZED_ACTOR=$(sanitize "$ACTOR")
           echo "REVIEWERS=$(echo "$SANITIZED_REVIEWERS" | xargs)" >> $GITHUB_ENV
           echo "NEW_REVIEWER=$SANITIZED_NEW_REVIEWER" >> $GITHUB_ENV
-          echo "ACTOR=$SANITIZED_ACTOR" >> $GITHUB_ENV
           
       - name: Determine checklist type
         id: checklist_type
         run: |
-          # Only act if the user requested themselves
-          if [ "$ACTOR" != "$NEW_REVIEWER" ]; then
-            echo "SKIP=true" >> $GITHUB_ENV
-            exit 0
-          fi
           COUNT=$(echo "$REVIEWERS" | grep -c .)
           if [ "$COUNT" -eq "1" ]; then
             echo "TEMPLATE=main_rev_checklist.md" >> $GITHUB_ENV
-            echo "SKIP=false" >> $GITHUB_ENV
           else
             echo "TEMPLATE=rev_checklist.md" >> $GITHUB_ENV
-            echo "SKIP=false" >> $GITHUB_ENV
           fi
+          echo "SKIP=false" >> $GITHUB_ENV
 
       - name: Prepare checklist
         if: env.SKIP == 'false'
