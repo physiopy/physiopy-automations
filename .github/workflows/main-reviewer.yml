@@ -2,61 +2,50 @@ name: Reviewer Checklist
 
 on:
   pull_request:
-    types: [unassigned, assigned, review_requested, review_request_removed]
+    types: [review_requested]
 
 jobs:
   checklist:
     runs-on: ubuntu-latest
-
     steps:
-      # Step 1: Check out the repository
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      # Step 2: Extract the assignee, reviewers, and PR details
-      - name: Extract PR details
+      - name: Extract PR reviewer info
         id: pr_details
         run: |
-          ASSIGNEE=$(jq -r '.assignee.login // ""' < $GITHUB_EVENT_PATH)
-          REVIEWERS=$(jq -r '.pull_request.requested_reviewers[].login // ""' < $GITHUB_EVENT_PATH)
-          echo "ASSIGNEE=$ASSIGNEE" >> $GITHUB_ENV
+          REVIEWERS=$(jq -r '.pull_request.requested_reviewers[].login' < $GITHUB_EVENT_PATH)
+          NEW_REVIEWER=$(jq -r '.requested_reviewer.login' < $GITHUB_EVENT_PATH)
+          ACTOR=$(jq -r '.sender.login' < $GITHUB_EVENT_PATH)
           echo "REVIEWERS=$REVIEWERS" >> $GITHUB_ENV
+          echo "NEW_REVIEWER=$NEW_REVIEWER" >> $GITHUB_ENV
+          echo "ACTOR=$ACTOR" >> $GITHUB_ENV
 
-      # Step 3: Determine the checklist template or skip posting
-      - name: Determine checklist template or skip
-        id: checklist_template
+      - name: Determine checklist type
+        id: checklist_type
         run: |
-          ASSIGNEE="${{ env.ASSIGNEE }}"
-          REVIEWERS="${{ env.REVIEWERS }}"
-          
-          # If assignee is also a reviewer, use main_rev_checklist.md
-          if [[ "$REVIEWERS" == *"$ASSIGNEE"* && -n "$ASSIGNEE" ]]; then
+          # Only act if the user requested themselves
+          if [ "$ACTOR" != "$NEW_REVIEWER" ]; then
+            echo "SKIP=true" >> $GITHUB_ENV
+            exit 0
+          fi
+          COUNT=$(echo "$REVIEWERS" | wc -w)
+          if [ "$COUNT" -eq "1" ]; then
             echo "TEMPLATE=main_rev_checklist.md" >> $GITHUB_ENV
-            echo "POST_CHECKLIST=true" >> $GITHUB_ENV
-          # If assignee is set but NOT a reviewer, skip posting
-          elif [[ -n "$ASSIGNEE" && "$REVIEWERS" != *"$ASSIGNEE"* ]]; then
-            echo "POST_CHECKLIST=false" >> $GITHUB_ENV
-          # If there are reviewers (and assignee is empty or not a reviewer), use rev_checklist.md
-          elif [[ -n "$REVIEWERS" ]]; then
-            echo "TEMPLATE=rev_checklist.md" >> $GITHUB_ENV
-            echo "POST_CHECKLIST=true" >> $GITHUB_ENV
+            echo "SKIP=false" >> $GITHUB_ENV
           else
-            echo "POST_CHECKLIST=false" >> $GITHUB_ENV
+            echo "TEMPLATE=rev_checklist.md" >> $GITHUB_ENV
+            echo "SKIP=false" >> $GITHUB_ENV
           fi
 
-      # Step 4: Replace the placeholder in the selected checklist template
-      - name: Replace reviewer name in checklist template
-        if: env.POST_CHECKLIST == 'true'
+      - name: Prepare checklist
+        if: env.SKIP == 'false'
         run: |
-          TEMPLATE=${{ env.TEMPLATE }}
-          ASSIGNEE=${{ env.ASSIGNEE }}
-          sed "s/__REV__/$ASSIGNEE/g" .github/workflows/$TEMPLATE > filled_checklist.md
+          sed "s/__REV__/${{ env.NEW_REVIEWER }}/g" .github/workflows/${{ env.TEMPLATE }} > filled_checklist.md
 
-      # Step 5: Post the filled checklist as a comment
       - name: Post checklist as a comment
-        if: env.POST_CHECKLIST == 'true'
+        if: env.SKIP == 'false'
         uses: peter-evans/create-or-update-comment@v3
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          issue-number: ${{ github.event.pull_request.number }}
           body-path: filled_checklist.md
