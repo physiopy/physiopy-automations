@@ -49,3 +49,4 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           body-path: filled_checklist.md
+          issue-number: ${{ github.event.pull_request.number }}
