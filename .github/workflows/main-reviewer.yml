@@ -32,7 +32,7 @@ jobs:
       - name: Determine checklist type
         id: checklist_type
         run: |
-          COUNT=$(echo "$REVIEWERS" | grep -c .)
+          COUNT=$(echo "$REVIEWERS" | wc -w)
           if [ "$COUNT" -eq "1" ]; then
             echo "TEMPLATE=main_rev_checklist.md" >> $GITHUB_ENV
           else
