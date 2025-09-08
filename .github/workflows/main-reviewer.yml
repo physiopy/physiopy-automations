@@ -11,16 +11,27 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Extract PR reviewer info
+      - name: Extract PR reviewer info (sanitize usernames for GitHub mentions)
         id: pr_details
         run: |
+          # Only allow valid GitHub username characters: [A-Za-z0-9-]
+          sanitize() {
+            echo "$1" | sed 's/[^A-Za-z0-9-]//g'
+          }
+
           REVIEWERS=$(jq -r '.pull_request.requested_reviewers[].login' < $GITHUB_EVENT_PATH)
+          SANITIZED_REVIEWERS=""
+          for r in $REVIEWERS; do
+            SANITIZED_REVIEWERS="$SANITIZED_REVIEWERS $(sanitize "$r")"
+          done
           NEW_REVIEWER=$(jq -r '.requested_reviewer.login' < $GITHUB_EVENT_PATH)
           ACTOR=$(jq -r '.sender.login' < $GITHUB_EVENT_PATH)
-          echo "REVIEWERS=$REVIEWERS" >> $GITHUB_ENV
-          echo "NEW_REVIEWER=$NEW_REVIEWER" >> $GITHUB_ENV
-          echo "ACTOR=$ACTOR" >> $GITHUB_ENV
-
+          SANITIZED_NEW_REVIEWER=$(sanitize "$NEW_REVIEWER")
+          SANITIZED_ACTOR=$(sanitize "$ACTOR")
+          echo "REVIEWERS=$(echo "$SANITIZED_REVIEWERS" | xargs)" >> $GITHUB_ENV
+          echo "NEW_REVIEWER=$SANITIZED_NEW_REVIEWER" >> $GITHUB_ENV
+          echo "ACTOR=$SANITIZED_ACTOR" >> $GITHUB_ENV
+          
       - name: Determine checklist type
         id: checklist_type
         run: |
