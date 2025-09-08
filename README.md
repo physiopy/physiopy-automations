@@ -33,6 +33,8 @@ This workflow automatically assigns labels to a PR if the PR edits a specific fi
 ### 4 - welcome bot app, defined in [config.yml](https://github.com/physiopy/physiopy-test-workflows/blob/master/.github/config.yml)
 This bot automatically posts welcome and thank you messages when a contributor posts their first issue, first PR, and merges first PR. This is a nice way to welcome and thank new contributors, but also acts as an opportunity to direct them towards the relevant contributor guidelines, as needed.
 
+### 5 - main reviewer checklist (desc to come)
+
 Example:
 
 ![image](https://github.com/user-attachments/assets/b5fa9565-851b-4c0a-8b97-e9e414276b7d)

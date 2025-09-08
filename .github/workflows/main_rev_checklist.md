@@ -1,4 +1,4 @@
-Hello @__MAINREV__!
+Hello @__REV__!
 
 You've been assigned to this PR, which means that you've been nominated Main Reviewer! Lucky you!
 
