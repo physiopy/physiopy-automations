@@ -29,7 +29,7 @@ jobs:
             echo "SKIP=true" >> $GITHUB_ENV
             exit 0
           fi
-          COUNT=$(echo "$REVIEWERS" | wc -w)
+          COUNT=$(echo "$REVIEWERS" | grep -c .)
           if [ "$COUNT" -eq "1" ]; then
             echo "TEMPLATE=main_rev_checklist.md" >> $GITHUB_ENV
             echo "SKIP=false" >> $GITHUB_ENV
